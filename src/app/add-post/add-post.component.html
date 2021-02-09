@@ -1,0 +1,26 @@
+<h1>Add post:</h1>
+<form [formGroup]="postForm" (ngSubmit)="Add()"style="width: 350px;">
+    <div class="mb-3" >
+        <label for="formGroupExampleInput" class="form-label">Titre</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" formControlName="titre"placeholder="Example Titre">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Description</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="description" placeholder="Description">
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Catégorie</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>Sports</option>
+          <option value="1">Technologies</option>
+          <option value="2">Economie</option>
+          <option value="3">Culture</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Date</label>
+        <input type="date" class="form-control" id="formGroupExampleInput2" formControlName="date" placeholder="Date">
+      </div>
+      <button type="submit" class="btn btn-dark">Add</button>
+
+</form>

@@ -1,0 +1,14 @@
+<ul class="list-group" *ngFor="let post of aff;let i =index">
+    <div style="width: 350px;" >
+    <li class="list-group-item">Détails de la publication:</li>
+    <li class="list-group-item list-group-item-danger">{{post.titre}}</li>
+    <li class="list-group-item list-group-item-danger">{{post.description}}</li>
+    <li class="list-group-item list-group-item-danger">{{post.categorie}}</li>
+    <li class="list-group-item list-group-item-danger">{{post.date}}</li>
+    </div>
+    <div>
+        <a [routerLink]="['/update-post',post.titre]">Modifier</a>
+        <button type="button" class="btn btn-dark" (click)="delete(newTab,i)">Supprimer</button>
+
+</div>
+</ul>

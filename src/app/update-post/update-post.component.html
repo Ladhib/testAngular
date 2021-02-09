@@ -1,0 +1,21 @@
+<form [formGroup]="postFormModified">
+    <span class="input-group-text" id="basic-addon1">Titre :</span>
+    <input type="text" class="form-control" placeholder="Username" formControlName="titre" aria-label="Username"
+        aria-describedby="basic-addon1">
+    <span class="input-group-text">Description :</span>
+    <textarea class="form-control" aria-label="With textarea" formControlName="description"></textarea>
+
+    <label class="input-group-text" for="inputGroupSelect01">Categorie</label>
+    <select class="form-select" id="inputGroupSelect01" formControlName="categorie">
+        <option selected>Choose...</option>
+        <option value="Sport">Sport</option>
+        <option value="Technologies">Technologies</option>
+        <option value="Economie">Economie</option>
+        <option value="Culture">Culture</option>
+    </select>
+    <input type="date" formControlName="date">
+
+    <button type="button" (click)="modifier(a,b,c)" class="btn btn-success">Valider</button>
+
+
+</form>
